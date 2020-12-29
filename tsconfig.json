@@ -1,23 +1,18 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",
+    "module": "commonjs",
     "declaration": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": false,
-    "target": "ES6",
+    "allowSyntheticDefaultImports": true,
+    "target": "es6",
     "noImplicitAny": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
-    "moduleResolution": "Node",
+    "moduleResolution": "node",
     "sourceMap": true,
     "outDir": "dist",
-    "baseUrl": ".",
-    "paths": {
-      "*": [
-        "src/types/*"
-      ]
-    }
+    "baseUrl": "."
   },
   "include": [
     "src/**/*"

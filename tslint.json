@@ -1,0 +1,15 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "rules": {
+    "trailing-comma": [
+      false
+    ],
+    "array-type": false,
+    "object-literal-shorthand": false,
+    "variable-name": false
+  },
+  "rulesDirectory": []
+}

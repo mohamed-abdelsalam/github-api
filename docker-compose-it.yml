@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  redis-it:
+    container_name: redis-it
+    hostname: redis-it
+    image: redis
+
+  github-api:
+    depends_on:
+      - redis-it
+    build: .
+    environment:
+      - REST_API_ENDPOINT=https://api.github.com/
+      - REST_TIMEOUT=4000
+      - REDIS_CACHE_IS_ENABLED=true
+      - REDIS_CACHE_HOST=redis-it
+      - REDIS_CACHE_PORT=6379
+      - REDIS_CACHE_TTL_MS=86400000
+      - SERVING_PORT=3005
+    ports:
+      - "3005:3005"
